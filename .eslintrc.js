@@ -24,7 +24,8 @@ module.exports = {
         'react/jsx-props-no-spreading': 'off',
         'react/jsx-wrap-multilines': 'off',
         'react/destructuring-assignment': 'off',
-        'react/jsx-filename-extension': [1, { extensions: ['.js'] }],
+        'react/react-in-jsx-scope': 'off',
+        'react/function-component-definition': [2, { "namedComponents": "arrow-function" }],
     },
     settings: {
         'import/resolver': {
