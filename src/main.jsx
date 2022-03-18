@@ -1,7 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const App = () => <h1>App</h1>;
+import RouterHandler from '@state/router/RouterHandler';
+import GlobalStyles from '@styles/globalStyles';
+
+import DeviceContainer from '@components/DeviceContainer';
+
+const App = () => (
+    <>
+        <GlobalStyles />
+        <DeviceContainer>
+            <RouterHandler />
+        </DeviceContainer>
+    </>
+);
 
 ReactDOM.render(
     <React.StrictMode>

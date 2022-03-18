@@ -25,7 +25,7 @@ module.exports = {
         'react/jsx-wrap-multilines': 'off',
         'react/destructuring-assignment': 'off',
         'react/react-in-jsx-scope': 'off',
-        'react/function-component-definition': [2, { "namedComponents": "arrow-function" }],
+        'react/function-component-definition': [2, { namedComponents: 'arrow-function' }],
     },
     settings: {
         'import/resolver': {
