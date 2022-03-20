@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import useSearchPictures from '@hooks/useSearchPictures';
 
@@ -18,6 +19,7 @@ import {
 } from './Login.styled';
 
 const Login = () => {
+    const navigate = useNavigate();
     const { photos, fetchData } = useSearchPictures();
 
     useEffect(() => {
@@ -42,8 +44,10 @@ const Login = () => {
                 </LogoContainer>
             </Hero>
             <Options>
-                <Button>Log In</Button>
-                <Button isPrimary>Register</Button>
+                <Button onClick={() => navigate('/home')}>Log In</Button>
+                <Button onClick={() => navigate('/home')} isPrimary>
+                    Register
+                </Button>
             </Options>
         </Wrapper>
     );

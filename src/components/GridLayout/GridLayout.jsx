@@ -1,17 +1,13 @@
 import PropTypes from 'prop-types';
 
-import {} from './GridLayout.styled';
+import { Wrapper } from './GridLayout.styled';
 
-const GridLayout = ({ ...props }) => {
-    return <>{/* TODO: Content */}</>;
+const GridLayout = ({ children }) => {
+    return <Wrapper>{children}</Wrapper>;
 };
 
 GridLayout.propTypes = {
-    // TODO: Props Definition
-};
-
-GridLayout.defaultProps = {
-    // TODO: Default Props Values
+    children: PropTypes.node.isRequired,
 };
 
 export default GridLayout;

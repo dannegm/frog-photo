@@ -1,17 +1,25 @@
 import PropTypes from 'prop-types';
 
-import {} from './TextField.styled';
+import { Wrapper, Input } from './TextField.styled';
 
-const TextField = ({ ...props }) => {
-    return <>{/* TODO: Content */}</>;
+const TextField = ({ value, placeholder, onChange }) => {
+    return (
+        <Wrapper>
+            <Input value={value} placeholder={placeholder} onChange={onChange} />
+        </Wrapper>
+    );
 };
 
 TextField.propTypes = {
-    // TODO: Props Definition
+    value: PropTypes.string,
+    placeholder: PropTypes.string,
+    onChange: PropTypes.func,
 };
 
 TextField.defaultProps = {
-    // TODO: Default Props Values
+    value: '',
+    placeholder: '',
+    onChange: () => null,
 };
 
 export default TextField;
