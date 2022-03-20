@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { PictureShape } from '@utils/models';
 
 import IconButton from '@components/IconButton';
@@ -6,11 +8,11 @@ import UserBadge from '@components/UserBadge';
 import { Wrapper, Image, Overlay, Header, BigImage } from './Picture.styled';
 import { useState } from 'react';
 
-const Picture = ({ url, user }) => {
+const Picture = ({ url, user, isSquare }) => {
     const [show, setShow] = useState(false);
     return (
         <Wrapper>
-            <Image src={url} onClick={() => setShow(true)} />
+            <Image isSquare={isSquare} src={url} onClick={() => setShow(true)} loading='lazy' />
             {show && (
                 <Overlay>
                     <Header>
@@ -27,7 +29,7 @@ const Picture = ({ url, user }) => {
                             onClick={() => setShow(false)}
                         />
                     </Header>
-                    <BigImage src={url} alt='' />
+                    <BigImage src={url} alt='' loading='lazy' />
                 </Overlay>
             )}
         </Wrapper>
@@ -36,6 +38,11 @@ const Picture = ({ url, user }) => {
 
 Picture.propTypes = {
     ...PictureShape,
+    isSquare: PropTypes.bool.isRequired,
+};
+
+Picture.defaultProps = {
+    isSquare: false,
 };
 
 export default Picture;

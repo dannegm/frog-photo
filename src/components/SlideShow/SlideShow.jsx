@@ -37,6 +37,7 @@ const SlideShow = ({ pictures, interval }) => {
                         key={picture.id}
                         isActive={currentSlide === index}
                         src={picture.url}
+                        loading='lazy'
                         alt=''
                     />
                 ))}

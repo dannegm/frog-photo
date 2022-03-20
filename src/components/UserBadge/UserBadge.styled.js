@@ -10,8 +10,8 @@ export const Wrapper = styled.div`
 
 export const Avatar = styled.img`
     display: block;
-    width: 28px;
-    height: 28px;
+    width: 28px !important;
+    height: 28px !important;
     border-radius: 50%;
     object-fit: cover;
 `;
@@ -47,4 +47,5 @@ export const InfoContainer = styled.div`
     flex: 1;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
 `;

@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import colors from '@styles/colors';
 
 const slideUpIn = keyframes`
@@ -20,6 +20,13 @@ export const Wrapper = styled.div`
 export const Image = styled.img`
     display: block;
     width: 100%;
+
+    ${({ isSquare }) =>
+        isSquare &&
+        css`
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        `}
 `;
 
 export const Overlay = styled.div`

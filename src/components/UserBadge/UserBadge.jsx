@@ -7,10 +7,10 @@ import { Wrapper, Avatar, Title, Subtitle, InfoContainer } from './UserBadge.sty
 const UserBadge = ({ name, username, avatarUrl, isDark }) => {
     return (
         <Wrapper>
-            <Avatar src={avatarUrl} alt='' />
+            <Avatar src={avatarUrl} alt='' loading='lazy' />
             <InfoContainer>
-                <Title isDark>{name}</Title>
-                <Subtitle isDark>{`@${username}`}</Subtitle>
+                <Title isDark={isDark}>{name}</Title>
+                <Subtitle isDark={isDark}>{`@${username}`}</Subtitle>
             </InfoContainer>
         </Wrapper>
     );
