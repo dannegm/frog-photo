@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import useSearchPictures from '@hooks/useSearchPictures';
 import useDebounce from '@hooks/useDebounce';

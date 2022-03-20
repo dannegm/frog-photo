@@ -1,3 +1,4 @@
+import React from 'react';
 import IcoMoon from 'react-icomoon';
 import iconSet from '@assets/eva-icon-set.json';
 

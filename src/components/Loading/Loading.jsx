@@ -1,3 +1,4 @@
+import React from 'react';
 import { Wrapper, Circle } from './Loading.styled';
 
 const Loading = () => {

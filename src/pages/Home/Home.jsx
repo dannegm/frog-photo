@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 
+import React from 'react';
 import useListPictures from '@hooks/useListPictures';
 
 import Button from '@components/Button';

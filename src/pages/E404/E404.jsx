@@ -1,3 +1,5 @@
+import React from 'react';
+
 const App = () => (
     <>
         <h1>404</h1>
