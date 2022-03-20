@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import colors from '@styles/colors';
 
 export const Wrapper = styled.div`
@@ -21,6 +21,12 @@ export const Title = styled.div`
     font-weight: 700;
     font-size: 13px;
     color: ${colors.black};
+
+    ${({ isDark }) =>
+        isDark &&
+        css`
+            color: ${colors.white};
+        `}
 `;
 
 export const Subtitle = styled.div`
@@ -28,6 +34,12 @@ export const Subtitle = styled.div`
     font-weight: 500;
     font-size: 11px;
     color: ${colors.black};
+
+    ${({ isDark }) =>
+        isDark &&
+        css`
+            color: ${colors.white};
+        `}
 `;
 
 export const InfoContainer = styled.div`

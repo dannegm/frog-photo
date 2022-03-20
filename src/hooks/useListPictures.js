@@ -5,14 +5,14 @@ import { mapPhotos } from '@utils/mappers';
 
 import useFetch from './useFetch';
 
-const SEARCH_PHOTOS_ENDPOINT = '/search/photos';
+const LIST_PHOTOS_ENDPOINT = '/photos';
 
-const useSearchPictures = () => {
+const useListPictures = () => {
     const [photos, setPhotos] = useState();
-    const { data, error, isLoading, fetchData } = useFetch(unsplashClient, SEARCH_PHOTOS_ENDPOINT);
+    const { data, error, isLoading, fetchData } = useFetch(unsplashClient, LIST_PHOTOS_ENDPOINT);
 
     useEffect(() => {
-        data && setPhotos(mapPhotos(data.results));
+        data && setPhotos(mapPhotos(data));
     }, [data]);
 
     return {
@@ -23,4 +23,4 @@ const useSearchPictures = () => {
     };
 };
 
-export default useSearchPictures;
+export default useListPictures;

@@ -17,4 +17,5 @@ export const Container = styled.div`
     max-height: 790px;
     background-color: ${colors.white};
     box-shadow: 2px 2px 20px 0px rgb(0 0 0 / 12%);
+    position: relative;
 `;

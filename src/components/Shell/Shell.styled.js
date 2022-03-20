@@ -5,14 +5,15 @@ export const Wrapper = styled.div`
     flex-direction: column;
     height: 100%;
     overflow: hidden;
+    position: relative;
 `;
 
 export const Container = styled.div`
-    display: flex;
+    display: block;
     flex: 1;
-    flex-direction: column;
     overflow-x: hidden;
     overflow-y: auto;
+    position: relative;
 `;
 
 export const MenuContainer = styled.div`

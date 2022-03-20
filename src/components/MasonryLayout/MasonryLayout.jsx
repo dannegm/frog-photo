@@ -1,17 +1,24 @@
 import PropTypes from 'prop-types';
+import Masonry from 'react-masonry-css';
 
-import {} from './MasonryLayout.styled';
+import { Wrapper } from './MasonryLayout.styled';
 
-const MasonryLayout = ({ ...props }) => {
-    return <>{/* TODO: Content */}</>;
+const MasonryLayout = ({ children }) => {
+    return (
+        <Wrapper>
+            <Masonry
+                breakpointCols={{ default: 2 }}
+                className='masonry'
+                columnClassName='masonry__column'
+            >
+                {children}
+            </Masonry>
+        </Wrapper>
+    );
 };
 
 MasonryLayout.propTypes = {
-    // TODO: Props Definition
-};
-
-MasonryLayout.defaultProps = {
-    // TODO: Default Props Values
+    children: PropTypes.node.isRequired,
 };
 
 export default MasonryLayout;

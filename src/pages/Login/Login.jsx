@@ -17,11 +17,11 @@ import {
     Options,
 } from './Login.styled';
 
-const App = () => {
-    const { data, setParams } = useSearchPictures();
+const Login = () => {
+    const { photos, fetchData } = useSearchPictures();
 
     useEffect(() => {
-        setParams({
+        fetchData({
             query: 'abstract',
             color: 'blue',
             orientation: 'portrait',
@@ -34,7 +34,7 @@ const App = () => {
         <Wrapper>
             <Hero>
                 <SlideShowContainer>
-                    {data !== null && <SlideShow pictures={data} />}
+                    {Boolean(photos) && <SlideShow pictures={photos} />}
                 </SlideShowContainer>
                 <LogoContainer>
                     <Logo loading='lazy' src={logo} alt='' />
@@ -49,4 +49,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default Login;

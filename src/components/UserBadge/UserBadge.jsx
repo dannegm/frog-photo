@@ -1,25 +1,28 @@
 import PropTypes from 'prop-types';
 
+import { UserShape } from '@utils/models';
+
 import { Wrapper, Avatar, Title, Subtitle, InfoContainer } from './UserBadge.styled';
 
-const UserBadge = ({ name, username, avatarUrl }) => {
+const UserBadge = ({ name, username, avatarUrl, isDark }) => {
     return (
         <Wrapper>
             <Avatar src={avatarUrl} alt='' />
             <InfoContainer>
-                <Title>{name}</Title>
-                <Subtitle>{`@${username}`}</Subtitle>
+                <Title isDark>{name}</Title>
+                <Subtitle isDark>{`@${username}`}</Subtitle>
             </InfoContainer>
         </Wrapper>
     );
 };
 
 UserBadge.propTypes = {
-    // TODO: Props Definition
+    ...UserShape,
+    isDark: PropTypes.bool,
 };
 
 UserBadge.defaultProps = {
-    // TODO: Default Props Values
+    isDark: false,
 };
 
 export default UserBadge;
