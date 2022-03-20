@@ -16,7 +16,11 @@ const alias = Object.entries(compilerOptions.paths).reduce((acc, [key, [value]])
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [react()],
+    plugins: [
+        react({
+            jsxRuntime: 'classic',
+        }),
+    ],
     resolve: {
         alias,
     },
