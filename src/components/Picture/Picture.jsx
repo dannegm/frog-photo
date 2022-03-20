@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { PictureShape } from '@utils/models';
@@ -7,7 +7,6 @@ import IconButton from '@components/IconButton';
 import UserBadge from '@components/UserBadge';
 
 import { Wrapper, Image, Overlay, Header, BigImage } from './Picture.styled';
-import { useState } from 'react';
 
 const Picture = ({ url, user, isSquare }) => {
     const [show, setShow] = useState(false);
@@ -39,7 +38,7 @@ const Picture = ({ url, user, isSquare }) => {
 
 Picture.propTypes = {
     ...PictureShape,
-    isSquare: PropTypes.bool.isRequired,
+    isSquare: PropTypes.bool,
 };
 
 Picture.defaultProps = {
