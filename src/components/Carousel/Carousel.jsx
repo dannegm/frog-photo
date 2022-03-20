@@ -22,6 +22,7 @@ const Carousel = ({ pictures }) => {
         showArrows: false,
         showStatus: false,
         infiniteLoop: true,
+        emulateTouch: true,
     };
 
     return (
