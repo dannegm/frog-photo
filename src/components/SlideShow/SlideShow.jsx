@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 
-import { getRandomInt } from '@utils/helpers';
+import { getUnrepeatedRandomInt } from '@utils/helpers';
 import { PictureShape } from '@utils/models';
 
 import UserBadge from '@components/UserBadge';
@@ -10,11 +10,13 @@ import { Wrapper, SlideContainer, Slide, Overlay } from './SlideShow.styled';
 
 const SlideShow = ({ pictures, interval }) => {
     const [currentSlide, setCurrentSlide] = useState(0);
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState(pictures[0]?.user);
     const $timer = useRef(null);
 
+    const getNextRandomInt = getUnrepeatedRandomInt(0, pictures.length - 1, true);
+
     const nextRandomSlide = () => {
-        const randomIndex = getRandomInt(0, pictures.length - 1);
+        const randomIndex = getNextRandomInt();
         setCurrentSlide(randomIndex);
         setUser(pictures[randomIndex]?.user);
     };
